@@ -4,7 +4,13 @@
   "description": "A node.js webapp that works with the Habitica API.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node app"
+  },
+  "dependencies":{
+	"express" : "*",
+	"body-parser" : "*",
+	"requestify" : "*"
   },
   "repository": {
     "type": "git",
