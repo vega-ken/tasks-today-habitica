@@ -1,0 +1,22 @@
+{
+  "name": "tasks-today-habitica",
+  "version": "1.0.0",
+  "description": "A node.js webapp that works with the Habitica API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vega-ken/tasks-today-habitica.git"
+  },
+  "keywords": [
+    "habitica"
+  ],
+  "author": "Ken Vega",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vega-ken/tasks-today-habitica/issues"
+  },
+  "homepage": "https://github.com/vega-ken/tasks-today-habitica#readme"
+}

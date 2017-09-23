@@ -1,0 +1,61 @@
+body{
+    background: #fff;
+    font-family: tahoma, Arial, Helvetica;
+    color: #000;
+}
+
+.entradaTareas{
+  padding-left : 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+.nombreTarea{
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+#contenedorPrincipal{
+  margin-top: 35px;
+  padding-top: 35px;
+}
+
+.notaTarea{
+  color: #7A7C7D;
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+
+.checkbox {
+  margin-top: 0px;
+}
+
+.nombreSubtarea{
+  font-size: 13px;
+}
+
+.checkChecked:checked + span{
+  text-decoration:line-through
+}
+
+
+.formTareas{
+  margin-left: 10px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.formNewSubTask{
+  margin-left: 30px;
+  font-size: 13px;
+}
+
+.filaTarea{
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #CFC7C7;
+  
+}
+
+.action-buttons{
+  margin-top: 2.2px;
+}
