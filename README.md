@@ -1,22 +1,25 @@
 # Tasks-today-habitica
 A node.js web app that works with the Habitica API. For now, it just supports habitica tasks.
 
-![demonstration gif](https://i.imgur.com/vCmbmwm.gifv "demonstration gif")
+<!-- ![demonstration gif](https://i.imgur.com/vCmbmwm.gifv "demonstration gif") -->
+<a href="https://imgur.com/vCmbmwm"><img src="https://i.imgur.com/vCmbmwm.gif" title="source: imgur.com" align="center" /></a>
 
 I created this program as a way to practice and to use [Habitica](https://habitica.com/) as a more convenient task manager for me.
-It uses the [Habitica API v3](https://habitica.com/apidoc/)  bootstrap grid system, 
+It uses the [Habitica API v3](https://habitica.com/apidoc/), HTML, CSS, JS and Bootstrap.
 
-##Getting Started
+## Getting Started
 
 ### Prerequisites
 
-Having [Node.js](https://nodejs.org/) installed on your machine.
-Having an [Habitica](https://habitica.com/) account.
+* Having [Node.js](https://nodejs.org/) installed on your machine.
+* Having an [Habitica](https://habitica.com/) account.
 
 ### Installing
 
-Before running the program, you need to change the archive app.js. 
+Before running the program, you need to change the archive app.js.
+
 In the first two lines, replace *your-api-user-id* and *your-api-token* with yours from your account.
+
 You can get them [here](https://habitica.com/#/options/settings/api).
 
 After you save your changes, open the terminal or command prompt in the path of the archives downloaded and type:
@@ -31,7 +34,7 @@ then
 npm start
 ```
 
-If everything is ok, go to your browser to http://localhost:3000 
+If everything is ok, go to your browser to http://localhost:3000 , it should show all your actual tasks if any.
 
 After using the program, press Ctrl+C on the terminal to stop it.
 
