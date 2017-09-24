@@ -46,7 +46,6 @@ After using the program, press Ctrl+C on the terminal to stop it.
 
 ## Ideas for next versions
 
-- [ ] Pass all this code to just HTML, CSS and JS.
 - [ ] Enable daily tasks and habits also (those will be added to the navbar).
 - [ ] Add notes to tasks with a character. Example: if you write "Task 1 | Note of task 1", the program should separate the two of them.
 - [ ] Enable edit button or remove it.
