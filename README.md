@@ -1,5 +1,5 @@
 # Tasks-today-habitica
-A node.js web app that works with the Habitica API. For now, it just supports habitica tasks.
+A node.js web app that works with the Habitica API. For now, it just supports tasks.
 
 <!-- ![demonstration gif](https://i.imgur.com/vCmbmwm.gifv "demonstration gif") -->
 <a href="https://imgur.com/vCmbmwm"><img src="https://i.imgur.com/vCmbmwm.gif" title="source: imgur.com" align="center" /></a>
