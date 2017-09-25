@@ -11,7 +11,8 @@ It uses the [Habitica API v3](https://habitica.com/apidoc/), HTML, CSS, JS and B
 
 ### Prerequisites
 
-* Having [Node.js](https://nodejs.org/) installed on your machine.
+<!-- * Having [Node.js](https://nodejs.org/) installed on your machine. -->
+* Having <a href="https://nodejs.org/" target="_blank">Node.js</a> installed on your machine.
 * Having an [Habitica](https://habitica.com/) account.
 
 ### Installing
