@@ -7,6 +7,14 @@ A node.js web app that works with the Habitica API. For now, it just supports ha
 I created this program as a way to practice and to use [Habitica](https://habitica.com/) as a more convenient task manager for me.
 It uses the [Habitica API v3](https://habitica.com/apidoc/), HTML, CSS, JS and Bootstrap.
 
+### Features
+
+* Shows all your actual tasks on Habitica.
+* Creation of tasks and subtasks (for now, the default difficulty when creating them is hard).
+* Checking tasks and subtasks.
+* Deletion of tasks.
+* You can order the tasks, but this order won't sync with Habitica (working on it).
+
 ## Getting Started
 
 ### Prerequisites
@@ -50,8 +58,9 @@ After using the program, press Ctrl+C on the terminal to stop it.
 - [ ] Enable daily tasks and habits also (those will be added to the navbar).
 - [ ] Add notes to tasks with a character. Example: if you write "Task 1 | Note of task 1", the program should separate the two of them.
 - [ ] Enable edit button or remove it.
-- [ ] Enable the navigation button change the order of the tasks in the server.
+- [ ] Enable the navigation button sync the order with Habitica' server.
 - [ ] Add an indicator for the synchronization with Habitica' server.
+- [ ] Enable the user to choose difficulty of new tasks.
 
 ### Additional
 
