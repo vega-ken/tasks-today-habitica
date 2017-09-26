@@ -1,19 +1,19 @@
 # Tasks-today-habitica
-A node.js web app that works with the Habitica API. For now, it just supports tasks.
+A node.js web app that works with the Habitica API. For now, it just supports To-Dos.
 
 <!-- ![demonstration gif](https://i.imgur.com/vCmbmwm.gifv "demonstration gif") -->
 <a href="https://imgur.com/vCmbmwm"><img src="https://i.imgur.com/vCmbmwm.gif" title="source: imgur.com" align="center" /></a>
 
-I created this program as a way to practice and to use [Habitica](https://habitica.com/) as a more convenient task manager for me.
+I created this program as a way to practice and to use [Habitica](https://habitica.com/) as a more convenient To-Do manager for me.
 It uses the [Habitica API v3](https://habitica.com/apidoc/), HTML, CSS, JS and Bootstrap.
 
 ### Features
 
-* Shows all your actual tasks on Habitica.
-* Creation of tasks and subtasks (for now, the default difficulty when creating them is hard).
-* Checking tasks and subtasks.
-* Deletion of tasks.
-* You can order the tasks, but this order won't sync with Habitica (working on it).
+* Shows all your actual To-Dos in Habitica.
+* Creation of To-Dos and their respective checklists (for now, the default difficulty when creating them is hard).
+* Checking To-Dos and their respective checklists.
+* Deletion of To-Dos.
+* You can order the To-Dos, but this order won't sync with Habitica (working on it).
 
 ## Getting Started
 
@@ -43,24 +43,24 @@ then
 npm start
 ```
 
-If everything is ok, go to your browser to http://localhost:3000 , it should show all your actual tasks if any.
+If everything is ok, go to your browser to http://localhost:3000 , it should show all your actual To-Dos if any.
 
 After using the program, press Ctrl+C on the terminal to stop it.
 
 ## Troubleshooting
 
-* Normal tasks are completed or checked double clicking them on the text.
+* To-Dos are completed or checked double clicking them on the text.
 
-* If npm start gives you an error, you could have some service actually listening at port 3000. Check if port 3000 is listening on your machine.
+* If the command *npm start* gives you an error, you could have some service actually listening at port 3000. Check if port 3000 is listening on your machine.
 
 ## Ideas for next versions
 
-- [ ] Enable daily tasks and habits also (those will be added to the navbar).
-- [ ] Add notes to tasks with a character. Example: if you write "Task 1 | Note of task 1", the program should separate the two of them.
+- [ ] Enable Dailies and Habits (those will be added to the navbar as links).
+- [ ] Add notes to To-Dos with a character. Example: if you write "Task 1 | Note of task 1", the program should separate the two of them.
 - [ ] Enable edit button or remove it.
 - [ ] Enable the navigation button sync the order with Habitica' server.
 - [ ] Add an indicator for the synchronization with Habitica' server.
-- [ ] Enable the user to choose difficulty of new tasks.
+- [ ] Enable the user to choose difficulty of new To-Dos.
 
 ### Additional
 
