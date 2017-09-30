@@ -1,5 +1,5 @@
-var apiUser = 'your-api-user-id'; // you can get these at : https://habitica.com/#/options/settings/api
-var apiKey = 'your-api-token';
+var apiUser = '4f8ddfdb-dcf7-4fa8-8d2e-7c415090c763';
+var apiKey = '591013f2-8fbc-4a4f-9231-14b63cd7e531';
 
 var express = require('express');
 var app = express();
@@ -44,11 +44,13 @@ app.get('/getTasks',function(req,res)
 app.post('/addTask', function (req,res) 
 {
   var nameTask = req.body.text_task; //console.log(req.body.text_task);
-
+  var noteTask = req.body.note_task; //console.log(req.body.note_task);
+  
   requestify.request('https://habitica.com/api/v3/tasks/user', {
     method : 'POST',
     body: {
-  		text: nameTask,
+      text: nameTask,
+      notes: noteTask,
   		type: 'todo',
       priority: '2'
   	},
@@ -59,8 +61,8 @@ app.post('/addTask', function (req,res)
   })
   .then(function(response)
   {
-    //console.log(response.code);
-    //console.log(response.getBody());
+    //console.log("codigo de respuesta : " + response.code);
+    //console.log("body : " + response.getBody());
     res.json({data: response.getBody()}).end();
   });
 });

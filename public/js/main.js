@@ -65,36 +65,66 @@ $("document").ready(function(){
   $("#formAgregaTarea").on('submit',function(e){ 
     e.preventDefault();
     var newTask = $("#formTextNewTask"); // id del form : newTask.val()
-    var nameNewTask = newTask.val();
-    nameNewTask = nameNewTask.charAt(0).toUpperCase() + nameNewTask.slice(1);// si la primera letra fue en minúscula, convertirla a mayúscula
-    //TO DO : buscar por un caracter : ejm "|" y decidir que luego de eso se tomará el texto como nota para la tarea
+    var textNewTask = newTask.val();
+
+    var indexNoteTask = textNewTask.indexOf('|');
+    var nameNewTask;
+    var nameNoteTask;
+
+    if(indexNoteTask !== -1)
+    {
+      nameNewTask = textNewTask.charAt(0).toUpperCase() + textNewTask.slice(1,(indexNoteTask-1));
+      nameNoteTask = textNewTask.slice(indexNoteTask+2);
+    }
+    else{
+      nameNewTask = textNewTask.charAt(0).toUpperCase() + textNewTask.slice(1);
+      nameNoteTask = "";
+    }
 
     $.ajax(
     {
       type: 'POST',
       dataType: "json",
       url: window.location.href+"addTask",  // toma el url actual y le agrega "addTask" : ejm de como queda :  http://localhost:3000/addTask
-      data: {text_task : nameNewTask},
+      data: {text_task : nameNewTask, note_task : nameNoteTask},
       success:
         function( reply_data ) {
-
-          //console.log(reply_data.data);
+          console.log("respuesta a la creacion de una tarea");
+          console.log(reply_data.data);
           //console.log("id : " + reply_data.data.data.id);
 
-          $("#contenedorPrincipal2").prepend(
-            "<div class='row filaTarea' id='filaTarea"+reply_data.data.data.id+"'>"+ // TO DO : mejorar la forma en como manejar esta respuesta (variables)
-                "<div class='col-xs-8 col-sm-8 col-md-8 col-lg-8'>"+
-                  "<div id='nTarea"+reply_data.data.data.id+"'>"+
-                    "<p id='"+reply_data.data.data.id+"' class='nombreTarea' ondblclick='checkTheTask(id)'>" + reply_data.data.data.text + "</p>"+
+          if ( reply_data.data.data.notes === "" ){
+            console.log("no hay notas en la nueva tarea");
+            $("#contenedorPrincipal2").prepend(
+              "<div class='row filaTarea' id='filaTarea"+reply_data.data.data.id+"'>"+ // TO DO : mejorar la forma en como manejar esta respuesta (variables)
+                  "<div class='col-xs-8 col-sm-8 col-md-8 col-lg-8'>"+
+                    "<div id='nTarea"+reply_data.data.data.id+"'>"+
+                      "<p id='"+reply_data.data.data.id+"' class='nombreTarea' ondblclick='checkTheTask(id)'>" + reply_data.data.data.text + "</p>"+
+                    "</div>"+
                   "</div>"+
-                "</div>"+
-
-                "<span class='fa fa-plus col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons' id='addSubTask"+reply_data.data.data.id+"' onclick='addSubTask(this.id)'></span>"+ // value='"+e.id+"' (never could get the attribute value)
-                "<span class='fa fa-pencil-square-o col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons'></span>"+
-                "<span class='fa fa-trash col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons' id='deleteTask"+reply_data.data.data.id+"' onclick='deleteTask(this.id)'></span>"+ 
-                "<span class='fa fa-arrows-v col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons'></span>"+
-            "</div>");
-
+  
+                  "<span class='fa fa-plus col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons' id='addSubTask"+reply_data.data.data.id+"' onclick='addSubTask(this.id)'></span>"+ // value='"+e.id+"' (never could get the attribute value)
+                  "<span class='fa fa-pencil-square-o col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons'></span>"+
+                  "<span class='fa fa-trash col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons' id='deleteTask"+reply_data.data.data.id+"' onclick='deleteTask(this.id)'></span>"+ 
+                  "<span class='fa fa-arrows-v col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons'></span>"+
+              "</div>");
+          }
+          else{
+            $("#contenedorPrincipal2").prepend(
+              "<div class='row filaTarea' id='filaTarea"+reply_data.data.data.id+"'>"+ // TO DO : mejorar la forma en como manejar esta respuesta (variables)
+                  "<div class='col-xs-8 col-sm-8 col-md-8 col-lg-8'>"+
+                    "<div id='nTarea"+reply_data.data.data.id+"'>"+
+                      "<p id='"+reply_data.data.data.id+"' class='nombreTarea' ondblclick='checkTheTask(id)'>" + reply_data.data.data.text + "</p>"+
+                      "<p class='notaTarea'>"+reply_data.data.data.notes+"</p>"+
+                    "</div>"+
+                  "</div>"+
+  
+                  "<span class='fa fa-plus col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons' id='addSubTask"+reply_data.data.data.id+"' onclick='addSubTask(this.id)'></span>"+ // value='"+e.id+"' (never could get the attribute value)
+                  "<span class='fa fa-pencil-square-o col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons'></span>"+
+                  "<span class='fa fa-trash col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons' id='deleteTask"+reply_data.data.data.id+"' onclick='deleteTask(this.id)'></span>"+ 
+                  "<span class='fa fa-arrows-v col-xs-1 col-sm-1 col-md-1 col-lg-1 action-buttons'></span>"+
+              "</div>");
+          }
           //console.log("Task agregado a la pagina correctamente");
         }
     })
