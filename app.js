@@ -1,5 +1,5 @@
-var apiUser = '4f8ddfdb-dcf7-4fa8-8d2e-7c415090c763';
-var apiKey = '591013f2-8fbc-4a4f-9231-14b63cd7e531';
+var apiUser = 'your-api-user-id'; // you can get these at : https://habitica.com/#/options/settings/api
+var apiKey = 'your-api-token';
 
 var express = require('express');
 var app = express();
