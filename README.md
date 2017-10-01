@@ -14,6 +14,7 @@ It uses the [Habitica API v3](https://habitica.com/apidoc/), HTML, CSS, JS and B
 * Checking To-Dos and their respective checklists.
 * Deletion of To-Dos.
 * You can order the To-Dos, but this order won't sync with Habitica (working on it).
+* New : you can now enter notes to the To-Dos with '|'. Example: "" Name of the To-Do | Notes for the To-Do ""
 
 ## Getting Started
 
@@ -56,7 +57,7 @@ After using the program, press Ctrl+C on the terminal to stop it.
 ## Ideas for next versions
 
 - [ ] Enable Dailies and Habits (those will be added to the navbar as links).
-- [ ] Add notes to To-Dos with a character. Example: if you write "Task 1 | Note of task 1", the program should separate the two of them.
+- [x] Add notes to To-Dos with a character (example : " to-do name | to-do notes ")
 - [ ] Enable edit button or remove it.
 - [ ] Enable the navigation button sync the order with Habitica' server.
 - [ ] Add an indicator for the synchronization with Habitica' server.
